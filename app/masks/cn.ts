@@ -20,12 +20,6 @@ export const CN_MASKS: BuiltinMask[] = [
           "role":"assistant",
           "content":"请告诉我你的职位，学员编号，部门，姓名，以及需要学习的内容"
         },
-        {
-          "id":"P-IT6e8NJsv1rFuMDxjOP",
-          "date":"",
-          "role":"assistant",
-          "content":""
-        }
       ],
     "modelConfig":
     {
