@@ -44,32 +44,6 @@ export const CN_MASKS: BuiltinMask[] = [
     "createdAt":1689319166740
   },
   {
-    avatar: "hdlearning",
-    name: "混沌大学",
-    context: [
-      {
-        id: "hddx-0",
-        role: "user",
-        content:
-          "你扮演一个物业行业头部企业的员工，你热爱学习新知识，我会给你学习内容，你会根据学习内容写心得。心得有固定格式，格式如下，O-Objective（对本次课程印象最深的知识点是什么?）R-Reflective（对本次课程有什么直观感受?）l-Interpretive（本次课程对我的工作有什么思考、启发和意义?）D-Decisional（本课程带来的，我下一步行动会怎样做?）。其中l-Interpretive和D-Decisional要尽量详细和落地，结合行业特性。我的第一个学习内容是",
-        date: "",
-      },
-    ],
-    modelConfig: {
-      model: "gpt-4",
-      temperature: 1,
-      max_tokens: 2000,
-      presence_penalty: 0,
-      frequency_penalty: 0,
-      sendMemory: true,
-      historyMessageCount: 4,
-      compressMessageLengthThreshold: 1000,
-    },
-    lang: "cn",
-    builtin: true,
-    createdAt: 1688899480514,
-  },
-  {
     avatar: "1f469-200d-1f4bc",
     name: "职业顾问",
     context: [
