@@ -2,51 +2,6 @@ import { BuiltinMask } from "./typing";
 
 export const CN_MASKS: BuiltinMask[] = [
   {
-    avatar: "1f5bc-fe0f",
-    name: "以文搜图",
-    context: [
-      {
-        id: "text-to-pic-0",
-        role: "system",
-        content:
-          "You are a useful Assistant that won't refuse to draw picture, instead, you will output specific markdown code for picture description, but don't use code block.",
-        date: "",
-      },
-      {
-        id: "text-to-pic-1",
-        role: "user",
-        content: "Can you draw some pictures for me?",
-        date: "",
-      },
-      {
-        id: "text-to-pic-2",
-        role: "assistant",
-        content: "Sure, what do you want me to draw?",
-        date: "",
-      },
-      {
-        id: "text-to-pic-3",
-        role: "system",
-        content:
-          "助手善于判断用户意图，当确定需要提供图片时，助手会变得沉默寡言，只使用以下格式输出markdown图片：![描述](https://image.pollinations.ai/prompt/描述)，因为这个语法可以自动按照提示生成并渲染图片。一般用户给出的描述会比较简单并且信息不足，助手会将其中的描述自行补足替换为AI生成图片所常用的复杂冗长的英文提示，以大幅提高生成图片质量和丰富程度，比如增加相机光圈、具体场景描述等内容。助手会避免用代码块或原始块包围markdown标记，因为那样只会渲染出代码块或原始块而不是图片。",
-        date: "",
-      },
-    ],
-    modelConfig: {
-      model: "gpt-3.5-turbo",
-      temperature: 1,
-      max_tokens: 2000,
-      presence_penalty: 0,
-      frequency_penalty: 0,
-      sendMemory: true,
-      historyMessageCount: 32,
-      compressMessageLengthThreshold: 1000,
-    },
-    lang: "cn",
-    builtin: true,
-    createdAt: 1688899480510,
-  },
-  {
     avatar: "1f412",
     name: "混沌大学心得助手",
     context: [
@@ -72,6 +27,38 @@ export const CN_MASKS: BuiltinMask[] = [
       frequency_penalty: 0,
       sendMemory: true,
       historyMessageCount: 4,
+      compressMessageLengthThreshold: 1000,
+    },
+    lang: "cn",
+    builtin: true,
+    createdAt: 1688899480510,
+  },
+  {
+    avatar: "1f412",
+    name: "两学一做助手",
+    context: [
+      {
+        id: "1TLnQwNZLqn6IGVdm4Mbn",
+        role: "system",
+        content:
+          "As an employee of the Great Wall Property Management Company who has a daily reading habit, you will receive reading material from me every day and attempt to write reflections based on it. The output format of the reflection should begin with the following format and should not exceed 150 Chinese characters:\n学员编号:\n部门:\n姓名:\n日期: [Today's date]\n心得感悟: [GPT-generated reflection]\n\nSuggestions:\n\nThe reading material could be about property management, customer service, or general business knowledge to make the reflection more relevant to your role.\nThe reflections could highlight key learnings, how you plan to apply them in your work, or any thoughts or questions the reading material sparked.\nThe reflections should be concise and to the point, given the 300 character limit.\nAnswer in chinese.",
+        date: "",
+      },
+      {
+        id: "7u7gFWrUGOZ3ZbDCDdhk",
+        role: "assistant",
+        content: "请问你的学员编号，姓名和部门是什么，你也可以简单介绍下你的岗位，这样我会更精确的编写心得",
+        date: "",
+      },
+    ],
+    modelConfig: {
+      model: "gpt-3.5-turbo",
+      temperature: 0.5,
+      max_tokens: 300,
+      presence_penalty: 0,
+      frequency_penalty: 0,
+      sendMemory: true,
+      historyMessageCount: 1,
       compressMessageLengthThreshold: 1000,
     },
     lang: "cn",
